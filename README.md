@@ -8,15 +8,12 @@ This project is a clone of the Apollo247 doctors listing page, focusing on the G
 - **Filtering System**: Filter doctors by specialty, city, availability, gender, rating, experience, and language
 - **Pagination**: Page through doctor results
 - **REST APIs**: Backend APIs for adding doctors and listing doctors with filters
-- **SEO Optimized**: Includes Next-SEO for better search engine visibility
 - **Responsive Design**: Works on mobile, tablet, and desktop
 
 ## Tech Stack
 
 - **Frontend**: Next.js, React, Tailwind CSS
 - **Backend**: Next.js API Routes
-- **Database**: PostgreSQL with Prisma ORM
-- **SEO**: Next-SEO
 
 ## Installation
 
@@ -24,7 +21,6 @@ This project is a clone of the Apollo247 doctors listing page, focusing on the G
 
 - Node.js (v14 or newer)
 - npm or yarn
-- PostgreSQL database
 
 ### Steps
 
@@ -41,29 +37,6 @@ cd apollo-doctors-clone
 npm install
 # or
 yarn install
-```
-
-3. **Set up the environment variables**
-
-Create a `.env` file in the root directory with the following content:
-
-```
-DATABASE_URL="postgresql://username:password@localhost:5432/apollo_clone"
-```
-
-Replace `username`, `password` with your database credentials.
-
-4. **Set up the database**
-
-```bash
-# Generate Prisma client
-npx prisma generate
-
-# Push the database schema
-npx prisma db push
-
-# Seed the database with sample data
-npx prisma db seed
 ```
 
 5. **Run the development server**
@@ -87,7 +60,6 @@ apollo-doctors-clone/
 │   │   └── doctors/          # Doctor-related APIs
 │   ├── specialties/          # Specialty pages
 │   │   └── general-physician-internal-medicine/  # Main doctor listing page
-│   ├── globals.css           # Global styles
 │   ├── layout.tsx            # Root layout
 │   └── page.tsx              # Home page (redirects to doctor listing)
 ├── components/               # React components
@@ -95,15 +67,10 @@ apollo-doctors-clone/
 │   ├── DoctorFilters.tsx     # Filter sidebar component
 │   ├── Header.tsx            # Header component
 │   └── Pagination.tsx        # Pagination component
-├── prisma/                   # Prisma ORM files
-│   ├── schema.prisma         # Database schema
-│   └── seed.ts               # Database seed script
 ├── public/                   # Static files
 │   └── images/               # Image assets
-├── .env                      # Environment variables
 ├── next.config.js            # Next.js configuration
 ├── package.json              # Project dependencies
-├── tailwind.config.js        # Tailwind CSS configuration
 └── README.md                 # Project documentation
 ```
 
@@ -179,72 +146,3 @@ apollo-doctors-clone/
     }
   }
   ```
-
-## SEO Implementation
-
-This project implements several SEO best practices:
-
-1. **Meta Tags**: Using Next-SEO to add proper title, description, and OpenGraph tags
-2. **Semantic HTML**: Using proper heading hierarchy and semantic elements
-3. **Canonical URLs**: Setting canonical URLs to prevent duplicate content
-4. **Responsive Design**: Ensuring the site works well on all devices
-5. **Sitemap Generation**: Automatic sitemap generation with next-sitemap
-6. **Robots.txt**: Custom robots.txt configuration
-7. **Image Optimization**: Using Next.js Image component for optimized loading
-8. **Performance**: Optimized for Core Web Vitals and fast loading
-
-## Off-Page SEO Strategies
-
-To improve off-page SEO for this Apollo247 clone, consider implementing the following strategies:
-
-1. **Backlink Building**:
-   - Reach out to health blogs and medical directories for link placement
-   - Create shareable medical content that naturally attracts backlinks
-   - Guest posting on relevant healthcare websites
-
-2. **Social Media Presence**:
-   - Create and maintain profiles on Facebook, Twitter, LinkedIn, and Instagram
-   - Share doctor profiles, health tips, and promotions regularly
-   - Encourage patients to share their positive experiences
-
-3. **Local SEO**:
-   - Create and optimize Google My Business listings for each clinic location
-   - Ensure consistent NAP (Name, Address, Phone) information across all platforms
-   - Encourage patient reviews on Google, Practo, and other health platforms
-
-4. **Content Marketing**:
-   - Create a health blog with valuable medical information
-   - Develop downloadable health guides and resources
-   - Host webinars with doctors on common health topics
-
-5. **Influencer Partnerships**:
-   - Collaborate with health influencers and medical professionals
-   - Invite guest doctors to write for your blog
-   - Partner with health-related brands for co-marketing opportunities
-
-6. **Structured Data**:
-   - Implement Schema.org markup for doctors, medical organizations, and services
-   - Add FAQ schema for common questions
-   - Use review schema to showcase positive patient feedback
-
-7. **Mobile Optimization**:
-   - Ensure the site is fully responsive and mobile-friendly
-   - Optimize for voice search with conversational keywords
-   - Improve page speed for better mobile experience
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- This project is inspired by Apollo247's doctor listing page
-- Thanks to the Next.js and Prisma teams for their excellent documentation
